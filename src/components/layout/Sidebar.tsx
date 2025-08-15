@@ -1,4 +1,5 @@
 import { NavLink, useNavigate } from "react-router-dom";
+import logoUrl from '../../assets/images/logoCRCG1.png'
 
 export default function Sidebar() {
   const navigate = useNavigate();
@@ -9,10 +10,11 @@ export default function Sidebar() {
 
   return (
     <aside className="app-sidebar sidebar">
-      <div className="brand">Kiosko Admin</div>
+      <img className="login-logo" src={logoUrl} alt="Kiosko Admin" width={120} height={120} />
+      <div className="officerStyle">Oficina: "oficina"</div>
+      <div className="brand">Adminitrador de Kioskos</div>
       <nav className="nav">
         <NavLink to="/dashboard" aria-current="page">Dashboard</NavLink>
-        <a href="#" aria-current="page">Dashboard</a>
         <a href="#">Inicio</a>
         <a href="#">Monitoreo</a>
         <a href="#">Mantenimientos</a>

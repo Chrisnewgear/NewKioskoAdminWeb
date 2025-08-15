@@ -10,6 +10,11 @@
   .brand {
     font-weight: 700; margin-bottom: $space-6;
   }
+
+  .officerStyle {
+    font-weight: 700; margin-bottom: $space-6; font-size: large;
+  }
+
   .nav {
     display: grid; gap: $space-2;
     a {

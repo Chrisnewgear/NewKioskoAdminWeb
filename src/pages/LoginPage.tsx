@@ -1,5 +1,12 @@
 import { type FormEvent, useEffect, useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
+import logoUrl from '../assets/images/logoCRCG1.png'
+
+type LocationState = {
+  from?: {
+    pathname?: string;
+  };
+};
 
 export default function Login() {
   const navigate = useNavigate();
@@ -17,20 +24,21 @@ export default function Login() {
     setError(null);
 
     if(!email || !password){
-      setError('Ingrese correo y contraseña');
+      setError('Por favor ingrese correo y contraseña');
       return;
     }
 
     // Fake auth: save a flag and go to dashboard
     localStorage.setItem('auth', 'true');
-    const from = (location.state as any)?.from?.pathname || '/';
+    const from = (location.state as LocationState)?.from?.pathname || '/';
     navigate(from, { replace: true});
   }
 
   return(
     <div className="login-page">
       <div className="login-card">
-        <h1>Iniciar Sesion</h1>
+        <img className='login-logo' src={logoUrl} alt="Logo" />
+        <h1>Sistema Administrativo de Kioskos</h1>
         <form onSubmit={handleSubmit}>
           <label>
             Correo
