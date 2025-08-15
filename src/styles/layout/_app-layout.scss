@@ -1,0 +1,26 @@
+@use '../abstracts/variables' as *;
+
+.app-layout {
+  min-height: 100dvh; display: grid; grid-template-columns: 260px 1fr; grid-template-rows: 64px 1fr;
+  grid-template-areas:
+    'sidebar topbar'
+    'sidebar main';
+}
+.app-sidebar { grid-area: sidebar;  background-color: #0099D2;
+  color: #fff;}
+
+/* Ensure links inside the sidebar have good contrast and hover/active states */
+.app-sidebar.sidebar .nav a { color: #fff; }
+.app-sidebar.sidebar .nav a:hover { background: rgba(255, 255, 255, 0.16); }
+.app-sidebar.sidebar .nav a[aria-current='page'] {
+  background: rgba(255, 255, 255, 0.20);
+  color: #fff;
+}
+
+.app-topbar { grid-area: topbar; }
+.app-main { grid-area: main; padding: $space-6; }
+
+.card {
+  background: $surface-1; border: 1px solid $border; border-radius: $radius;
+  padding: $space-6;
+}

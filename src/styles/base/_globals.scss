@@ -1,0 +1,28 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  font-family: $font-sans;
+  color: $text;
+  background: $bg;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a { color: $brand; text-decoration: none; }
+a:hover { color: $brand-600; }
+
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  gap: $space-2;
+  padding: 0.5rem 0.875rem;
+  border-radius: $radius-sm;
+  background: $brand; color: white; border: 1px solid transparent;
+  cursor: pointer; transition: background .2s ease, box-shadow .2s ease;
+}
+.btn:hover { background: $brand-600; }
+.btn:focus-visible { @include focus-ring; }

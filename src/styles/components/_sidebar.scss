@@ -1,0 +1,22 @@
+@use '../abstracts/variables' as *;
+
+.sidebar {
+  width: 260px;
+  /* background moved to .app-sidebar to allow theming */
+  border-right: 1px solid $border; // keep divider
+  padding: $space-6 $space-4;
+  position: sticky; top: 0; height: 100dvh;
+
+  .brand {
+    font-weight: 700; margin-bottom: $space-6;
+  }
+  .nav {
+    display: grid; gap: $space-2;
+    a {
+      padding: 0.5rem 0.75rem; border-radius: $radius-sm;
+      color: $text; display: flex; gap: $space-3;
+    }
+    a:hover { background: $surface-2; }
+    a[aria-current='page'] { background: rgba($brand, 0.12); color: $brand-600; }
+  }
+}

@@ -1,0 +1,11 @@
+// 7-1 style architecture entry
+@forward 'abstracts/variables';
+@forward 'abstracts/mixins';
+
+@use 'base/reset';
+@use 'base/globals';
+@use 'base/typography';
+@use 'layout/app-layout';
+@use 'components/sidebar';
+@use 'components/topbar';
+@use 'components/loginPage';

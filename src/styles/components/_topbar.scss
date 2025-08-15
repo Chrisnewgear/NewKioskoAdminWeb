@@ -1,0 +1,6 @@
+@use '../abstracts/variables' as *;
+
+.topbar {
+  height: 64px; display: flex; align-items: center; justify-content: space-between;
+  padding: 0 $space-6; border-bottom: 1px solid $border; background: $surface-1;
+}

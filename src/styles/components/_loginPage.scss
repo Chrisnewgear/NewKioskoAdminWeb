@@ -1,0 +1,61 @@
+@use '../abstracts/variables' as *;
+
+.login-page{
+  min-width: 100dvh;
+  display: grid;
+  place-items: center;
+  background: $surface-1;
+}
+
+.login-card{
+  width: 100%;
+  max-width: 380px;
+  background: #fff;
+  border: 1px solid $border;
+  border-radius: $radius;
+  padding: $space-6;
+  box-shadow: 0 6px 24px rgb(0, 0, 0, 0.06);
+}
+
+h1 {
+  margin: 0 0 $space-4 0;
+  font-size: 1.25rem;
+}
+
+form{
+  display: grid;
+  gap: $space-4
+}
+
+label {
+  display: grid;
+  gap: $space-2;
+  color: $text-muted;
+}
+
+input{
+  border: 1px solid $border;
+  border-radius: $radius-sm;
+  padding: 0.6rem 0.75rem;
+  font: inherit;
+  color: $text;
+  background: #fff;
+}
+
+.error{ 
+  color: #d91d1d;
+  font-size: 0.9rem;
+}
+
+button{
+  background: #0099D2;
+  color: #fff;
+  border:0;
+  border-radius: $radius-sm;
+  padding: 0.65rem 0.9rem;
+  cursor: pointer;
+}
+
+button:hover{
+  filter: brightness(0.95);
+}
